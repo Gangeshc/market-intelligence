@@ -27,6 +27,13 @@ def health():
         "message": "Backend is working"
     }
 
+@app.get("/debug")
+def debug():
+    return {
+        "status": "debug works",
+        "file": "backend/main.py",
+        "version": "2026-08-27-v2"
+    }
 
 @app.get("/scanner")
 def scanner():
